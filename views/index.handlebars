@@ -1,0 +1,61 @@
+<header>
+  <!-- navigation -->
+  <nav class="navbar navbar-light bg-light">
+    {{!-- <div class="container">
+      <a class="navbar-brand" href="/">
+        幹話產生器
+      </a>
+    </div> --}}
+  </nav>
+  <form method="POST" action="/">
+    <div class="d-flex align-items-center flex-column">
+      <div>
+        <h1>你想對誰說幹話</h1>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="card m-2 d-flex align-items-center flex-column" style="width: 18rem; height: 16rem">
+          <img class="card-img-top img-fluid" style="height: 12rem"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="engineer">
+          <div class="card-body">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="target" id="engineer" value="engineer"
+                {{#if target.engineer}} checked{{/if}}>
+              <label class="form-check-label" for="engineer">Engineer</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-2 d-flex align-items-center flex-column" style="width: 18rem; height: 16rem">
+          <img class="card-img-top img-fluid" style="height: 12rem"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="designer">
+          <div class="card-body">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="target" id="designer" value="designer"
+                {{#if target.designer}} checked{{/if}}>
+              <label class="form-check-label" for="designer">Designer</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card m-2 d-flex align-items-center flex-column" style="width: 18rem; height: 16rem">
+          <img class="card-img-top img-fluid" style="height: 12rem"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="entrepreneur">
+          <div class="card-body">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="target" id="entrepreneur" value="entrepreneur"
+                {{#if target.entrepreneur}} checked{{/if}}>
+              <label class="form-check-label" for="entrepreneur">Entrepreneur</label>
+            </div>
+          </div>
+        </div>
+        {{!-- end of target --}}
+      </div>
+      <div class="d-flex mt-4" style="width: 70%;">
+        <button type="submit" class="btn btn-primary mr-3" style="height: 40px; width:10rem">產生幹話</button>
+        <textarea class="form-control" aria-label="With textarea" style="height: 200px;">{{trashTalk}}</textarea>
+      </div>
+    </div>
+  </form>
+
+</header>
